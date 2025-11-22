@@ -5,7 +5,7 @@ import React from "react";
 
 const Connect = () => {
   return (
-    <section className=" mb-10 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 text-white py-12 px-6 rounded-lg mx-4 md:mx-10 mt-10 shadow-lg">
+    <section className=" mb-10 bg-gradient-to-r from-indigo-600 via-orange-600 to-orange-500 text-white py-12 px-6 rounded-lg mx-4 md:mx-10 mt-10 shadow-lg">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="text-center md:text-left">
           <h2 className="text-3xl md:text-4xl font-bold mb-2">
@@ -19,7 +19,7 @@ const Connect = () => {
         <div>
           <a
             href="/contact"
-            className="inline-flex items-center gap-2 bg-pink-400 hover:bg-pink-500 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300"
+            className="inline-flex items-center gap-2 bg-black hover:bg-black/80 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300"
           >
             Contact Us
             {/* <ArrowRight className="w-4 h-4" /> */}

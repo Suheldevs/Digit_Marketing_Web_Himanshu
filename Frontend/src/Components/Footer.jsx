@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Send, 
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Send,
   ArrowUp,
   Facebook,
   Twitter,
@@ -54,15 +54,6 @@ const Footer = () => {
     { name: "Blog", href: "#blog" }
   ];
 
-  const support = [
-    { name: "Help Center", href: "#help" },
-    { name: "Contact Support", href: "#support" },
-    { name: "Privacy Policy", href: "#privacy" },
-    { name: "Terms of Service", href: "#terms" },
-    { name: "Cookie Policy", href: "#cookies" },
-    { name: "FAQ", href: "#faq" }
-  ];
-
   const socialLinks = [
     { icon: Facebook, href: "#facebook", color: "hover:text-blue-600" },
     { icon: Twitter, href: "#twitter", color: "hover:text-sky-500" },
@@ -90,8 +81,8 @@ const Footer = () => {
       {/* Top Wave Decoration */}
       <div className="absolute top-0 left-0 w-full overflow-hidden">
         <svg className="relative block w-full h-16" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path 
-            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" 
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
             fill="rgb(249 250 251)"
           ></path>
         </svg>
@@ -118,7 +109,7 @@ const Footer = () => {
                 </p>
               </div>
 
-            
+
             </div>
 
             {/* Services */}
@@ -159,12 +150,12 @@ const Footer = () => {
 
             {/* Support & Contact */}
             <div>
-              
+
 
               {/* Contact Info */}
               <div className="space-y-4">
                 <h4 className="font-semibold text-white">Get in Touch</h4>
-                
+
                 <div className="flex items-start space-x-3">
                   <MapPin className="w-5 h-5 text-orange-400 mt-1 flex-shrink-0" />
                   <div>
@@ -183,8 +174,8 @@ const Footer = () => {
 
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-orange-400" />
-                  <a href="mailto:info@digitalcraft.com" className="text-gray-300 hover:text-orange-400 transition-colors">
-                    info@digitalcraft.com
+                  <a href="mailto:info@codeclicks.in" className="text-gray-300 hover:text-orange-400 transition-colors">
+                    info@codeclicks.in
                   </a>
                 </div>
 
@@ -203,8 +194,8 @@ const Footer = () => {
             {/* Copyright */}
             <div className="text-gray-400 text-sm text-center lg:text-left">
               <p>
-                © 2024 <span className="text-orange-400 font-medium">DigitalCraft</span>. All Rights Reserved. 
-                <span className="text-gray-500"> | Design by Himanshu Nigam</span>
+                © 2025 <span className="text-orange-400 font-medium">CodeClicks</span>. All Rights Reserved.
+                <span className="text-gray-500"> | Design by CodeClicks Team</span>
               </p>
             </div>
 
@@ -226,7 +217,7 @@ const Footer = () => {
 
             {/* Additional Links */}
             <div className="flex items-center space-x-6 text-sm">
-              <a href="#privacy" className="text-gray-400 hover:text-orange-400 transition-colors">
+              <a href="/privacy-policy" className="text-gray-400 hover:text-orange-400 transition-colors">
                 Privacy Policy
               </a>
               <a href="#terms" className="text-gray-400 hover:text-orange-400 transition-colors">
@@ -256,4 +247,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;  
+export default Footer;

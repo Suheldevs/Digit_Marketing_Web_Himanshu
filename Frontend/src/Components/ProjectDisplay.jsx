@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import { 
-  Code, 
-  Search, 
-  Palette, 
+import {
+  Code,
+  Search,
+  Palette,
   Smartphone,
   TrendingUp,
   ArrowRight,
@@ -107,8 +107,8 @@ const ProjectsSection = () => {
     }
   ];
 
-  const filteredProjects = activeFilter === 'all' 
-    ? projects 
+  const filteredProjects = activeFilter === 'all'
+    ? projects
     : projects.filter(project => project.category === activeFilter);
 
   useEffect(() => {
@@ -133,12 +133,11 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section ref={sectionRef} className="py-16 bg-gradient-to-br from-orange-50 via-white to-pink-50">
+    <section id='portfolio' ref={sectionRef} className="py-16 bg-gradient-to-br from-orange-50 via-white to-pink-50">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header - Orange Theme (Same as Service Section) */}
-        <div className={`text-center mb-12 transform transition-all duration-1000 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-        }`}>
+        <div className={`text-center mb-12 transform transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          }`}>
           <span className="text-orange-600 font-medium uppercase tracking-wider mb-6 block">
             Our Portfolio
           </span>
@@ -147,28 +146,26 @@ const ProjectsSection = () => {
               Projects
             </span>
           </h2>
-          
+
           {/* Decorative Orange Line */}
           <div className="h-2 w-1/3 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full mb-6 mx-auto"></div>
-          
+
           <p className="text-gray-600 text-base sm:text-lg md:text-xl max-w-3xl mx-auto">
             Explore our recent projects and success stories that showcase our expertise in delivering exceptional digital solutions
           </p>
         </div>
 
         {/* Filter Chips */}
-        <div className={`flex flex-wrap justify-center gap-3 mb-12 transition-all duration-700 delay-100 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-        }`}>
+        <div className={`flex flex-wrap justify-center gap-3 mb-12 transition-all duration-700 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          }`}>
           {filters.map((filter) => (
             <button
               key={filter.id}
               onClick={() => setActiveFilter(filter.id)}
-              className={`flex items-center space-x-2 px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                activeFilter === filter.id
+              className={`flex items-center space-x-2 px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === filter.id
                   ? 'bg-gradient-to-r from-orange-500 to-pink-500 text-white shadow-lg'
                   : 'bg-white text-gray-700 hover:bg-orange-50 border border-gray-200'
-              }`}
+                }`}
             >
               {filter.icon && <filter.icon className="w-4 h-4" />}
               <span>{filter.name}</span>
@@ -177,19 +174,18 @@ const ProjectsSection = () => {
         </div>
 
         {/* Projects Slider */}
-        <div className={`relative transition-all duration-700 delay-200 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-        }`}>
-          
+        <div className={`relative transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          }`}>
+
           {/* Custom Navigation Buttons */}
-          <button 
+          <button
             onClick={() => swiperRef.current?.slidePrev()}
             className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-gray-700 hover:bg-gradient-to-r hover:from-orange-500 hover:to-pink-500 hover:text-white transition-all duration-300 -ml-6 group"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
-          
-          <button 
+
+          <button
             onClick={() => swiperRef.current?.slideNext()}
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-gray-700 hover:bg-gradient-to-r hover:from-orange-500 hover:to-pink-500 hover:text-white transition-all duration-300 -mr-6 group"
           >
@@ -203,7 +199,7 @@ const ProjectsSection = () => {
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={24}
             slidesPerView={1}
-            pagination={{ 
+            pagination={{
               clickable: true,
               bulletActiveClass: 'swiper-pagination-bullet-active-orange'
             }}
@@ -231,16 +227,16 @@ const ProjectsSection = () => {
                   <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-orange-500 group-hover:to-pink-500 transition-all duration-300">
                     {project.title}
                   </h3>
-                  
+
                   {/* Description */}
                   <p className="text-gray-600 text-sm mb-4 line-clamp-2">
                     {project.description}
                   </p>
-                  
+
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags.map((tag, idx) => (
-                      <span 
+                      <span
                         key={idx}
                         className="text-xs bg-orange-50 text-orange-700 px-3 py-1 rounded-full border border-orange-200"
                       >
@@ -248,7 +244,7 @@ const ProjectsSection = () => {
                       </span>
                     ))}
                   </div>
-                  
+
                   {/* Result & Arrow */}
                   <div className="flex items-center justify-between pt-4 border-t border-gray-100">
                     <span className="text-sm font-semibold text-green-600">

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Code, Smartphone, TrendingUp, Search, Palette, ChevronDown, Home, User, Mail, FolderOpen, Award } from 'lucide-react';
 import Modal from './Modal';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 // Header Component
@@ -23,49 +23,49 @@ const Header = () => {
     {
       name: 'Home',
       icon: Home,
-      href: '#home',
+      href: '/',
       hasDropdown: false
     },
     {
       name: 'About',
       icon: User,
-      href: '#about',
+      href: '/about',
       hasDropdown: false
     },
     {
       name: 'Services',
       icon: Award,
-      href: '#services',
+      href: '/services',
       hasDropdown: true,
       dropdownItems: [
         {
           name: 'Web Development',
           icon: Code,
-          href: '#web-development',
+          href: '/services/web-development',
           description: 'Custom websites & web apps'
         },
         {
           name: 'App Development',
           icon: Smartphone,
-          href: '#app-development',
+          href: '/services/app-development',
           description: 'iOS & Android applications'
         },
         {
           name: 'Digital Marketing',
           icon: TrendingUp,
-          href: '#digital-marketing',
+          href: '/services/digital-marketing',
           description: 'Grow your brand online'
         },
         {
           name: 'SEO',
           icon: Search,
-          href: '#seo',
+          href: '/services/seo',
           description: 'Boost online visibility'
         },
         {
           name: 'Graphic Design',
           icon: Palette,
-          href: '#graphic-design',
+          href: '/services/graphic-design',
           description: 'Creative visual solutions'
         }
       ]
@@ -79,35 +79,34 @@ const Header = () => {
     {
       name: 'Contact',
       icon: Mail,
-      href: '#contact',
+      href: '/contact',
       hasDropdown: false
     }
   ];
 
   return (
     <>
-      <header 
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled 
-            ? 'bg-white/95 backdrop-blur-md shadow-sm ' 
-            : 'bg-white/80 backdrop-blur-md py-4'
-        }`}
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+          ? 'bg-white/95 backdrop-blur-md shadow-sm '
+          : 'bg-white/80 backdrop-blur-md py-4'
+          }`}
       >
         <nav className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex justify-between items-center">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2 group">
-              <img 
-                src="/bg-fav.png" 
+              <img
+                src="/bg-fav.png"
                 alt="Logo"
                 className='h-16 object-contain p-1'
-                />
+              />
             </Link>
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
               {navItems.map((item, index) => (
-                <div 
+                <div
                   key={item.name}
                   className="relative"
                   onMouseEnter={() => setHoveredItem(index)}
@@ -125,11 +124,10 @@ const Header = () => {
 
                   {/* Dropdown Menu */}
                   {item.hasDropdown && (
-                    <div className={`absolute top-full left-0 mt-0 w-64 bg-white rounded-xl shadow-lg border border-gray-100  transform transition-all duration-200 ${
-                      hoveredItem === index 
-                        ? 'opacity-100 translate-y-0 pointer-events-auto' 
-                        : 'opacity-0 -translate-y-2 pointer-events-none'
-                    }`}>
+                    <div className={`absolute top-full left-0 mt-0 w-64 bg-white rounded-xl shadow-lg border border-gray-100  transform transition-all duration-200 ${hoveredItem === index
+                      ? 'opacity-100 translate-y-0 pointer-events-auto'
+                      : 'opacity-0 -translate-y-2 pointer-events-none'
+                      }`}>
                       {item.dropdownItems.map((dropdownItem) => (
                         <a
                           key={dropdownItem.name}
@@ -155,7 +153,7 @@ const Header = () => {
 
             {/* CTA Button */}
             <div className="hidden lg:block">
-              <button 
+              <button
                 onClick={() => setIsModalOpen(true)}
                 className="bg-gray-900 text-white px-6 py-2.5 rounded-full font-medium hover:bg-gray-800 transition-all duration-300"
               >
@@ -174,9 +172,8 @@ const Header = () => {
         </nav>
 
         {/* Mobile Menu */}
-        <div className={`lg:hidden transition-all duration-300 overflow-hidden ${
-          isMobileMenuOpen ? 'max-h-screen' : 'max-h-0'
-        }`}>
+        <div className={`lg:hidden transition-all duration-300 overflow-hidden ${isMobileMenuOpen ? 'max-h-screen' : 'max-h-0'
+          }`}>
           <div className="px-6 py-4 bg-white border-t border-gray-100">
             <div className="space-y-1">
               {navItems.map((item) => (
@@ -192,7 +189,7 @@ const Header = () => {
                     </div>
                     {item.hasDropdown && <ChevronDown className="w-4 h-4" />}
                   </a>
-                  
+
                   {item.hasDropdown && (
                     <div className="ml-8 space-y-1 mb-2">
                       {item.dropdownItems.map((dropdownItem) => (
@@ -210,9 +207,9 @@ const Header = () => {
                   )}
                 </div>
               ))}
-              
+
               <div className="pt-4">
-                <button 
+                <button
                   onClick={() => {
                     setIsModalOpen(true);
                     setIsMobileMenuOpen(false);
