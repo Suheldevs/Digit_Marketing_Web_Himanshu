@@ -8,10 +8,10 @@ const CTASection = () => {
   return (
     <>
       {/* Full Width CTA Section */}
-      <section className="relative w-full py-10 overflow-hidden">
+      <section className="relative w-full py-10 px-4 overflow-hidden">
         {/* Background Gradient */}
         <div className="absolute inset-0 bg-neutral-950 "></div>
-        
+
         {/* Animated Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse"></div>
@@ -21,7 +21,7 @@ const CTASection = () => {
         {/* Content Container */}
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
-            
+
             {/* Left Content */}
             <div className="flex-1 text-center lg:text-left">
               {/* Badge */}
@@ -36,7 +36,7 @@ const CTASection = () => {
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
                 Ready to Transform Your
                 <br />
-                <span className="text-orange-100">Digital Presence?</span>
+                <span className="text-orange-500">Digital Presence?</span>
               </h2>
 
               {/* Description */}
@@ -63,15 +63,15 @@ const CTASection = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <button
                   onClick={() => setIsModalOpen(true)}
-                  className="group bg-white text-orange-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-orange-50 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 flex items-center justify-center space-x-2"
+                  className="group bg-white text-orange-600 px-6 py-3 cursor-pointer rounded-full font-bold text-lg hover:bg-orange-50 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 flex items-center justify-center space-x-2"
                 >
                   <span>Start Your Project</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </button>
 
                 <a
-                  href="tel:+919876543210"
-                  className="group border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-orange-600 transition-all duration-300 flex items-center justify-center space-x-2"
+                  href="tel:+918318159403"
+                  className="group border-2 border-white text-white px-6 py-3 rounded-full font-bold text-lg hover:bg-white hover:text-orange-600 transition-all duration-300 flex items-center justify-center space-x-2"
                 >
                   <Phone className="w-5 h-5" />
                   <span>Call Us Now</span>
@@ -83,9 +83,9 @@ const CTASection = () => {
             <div className="flex-shrink-0 lg:w-auto">
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { number: '500+', label: 'Projects Completed' },
+                  { number: '20+', label: 'Projects Completed' },
                   { number: '98%', label: 'Client Satisfaction' },
-                  { number: '50+', label: 'Team Members' },
+                  { number: '10+', label: 'Team Members' },
                   { number: '24/7', label: 'Support Available' }
                 ].map((stat, index) => (
                   <div

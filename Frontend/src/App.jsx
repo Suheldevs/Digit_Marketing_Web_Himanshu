@@ -24,12 +24,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/services/web-development" element={<WebDevelopmentDetail />} />
-        <Route path="/services/app-development" element={<AppDevelopment />} />
-        <Route path="/services/digital-marketing" element={<DigitalMarketing />} />
-        <Route path="/services/seo" element={<SEO />} />
-        <Route path="/services/graphic-design" element={<GraphicDesign />} />
+        <Route path="/service" element={<Services />} />
+        <Route path="/service/web-development" element={<WebDevelopmentDetail />} />
+        <Route path="/service/app-development" element={<AppDevelopment />} />
+        <Route path="/service/digital-marketing" element={<DigitalMarketing />} />
+        <Route path="/service/seo" element={<SEO />} />
+        <Route path="/service/graphic-design" element={<GraphicDesign />} />
         <Route path="/web" element={<WebDevelopment />} />
         <Route path="/project" element={<Project />} />
         <Route path="/contact" element={<Contact />} />

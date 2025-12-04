@@ -35,37 +35,37 @@ const Header = () => {
     {
       name: 'Services',
       icon: Award,
-      href: '/services',
+      href: '/service',
       hasDropdown: true,
       dropdownItems: [
         {
           name: 'Web Development',
           icon: Code,
-          href: '/services/web-development',
+          href: '/service/web-development',
           description: 'Custom websites & web apps'
         },
         {
           name: 'App Development',
           icon: Smartphone,
-          href: '/services/app-development',
+          href: '/service/app-development',
           description: 'iOS & Android applications'
         },
         {
           name: 'Digital Marketing',
           icon: TrendingUp,
-          href: '/services/digital-marketing',
+          href: '/service/digital-marketing',
           description: 'Grow your brand online'
         },
         {
           name: 'SEO',
           icon: Search,
-          href: '/services/seo',
+          href: '/service/seo',
           description: 'Boost online visibility'
         },
         {
           name: 'Graphic Design',
           icon: Palette,
-          href: '/services/graphic-design',
+          href: '/service/graphic-design',
           description: 'Creative visual solutions'
         }
       ]

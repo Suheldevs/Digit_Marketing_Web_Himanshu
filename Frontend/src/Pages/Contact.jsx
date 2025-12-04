@@ -8,6 +8,7 @@ import {
   MessageCircle,
   Send
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -56,7 +57,7 @@ const Contact = () => {
             Contact Us
           </h1>
           <div className="flex items-center justify-center gap-2 text-sm font-medium text-gray-600">
-            <span className="hover:text-orange-600 transition-colors cursor-pointer">Home</span>
+            <Link to="/" className="hover:text-orange-600 transition-colors cursor-pointer">Home</Link>
             <ChevronRight className="w-4 h-4" />
             <span className="text-orange-600">Contact</span>
           </div>

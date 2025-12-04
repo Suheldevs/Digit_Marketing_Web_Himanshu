@@ -10,13 +10,13 @@ const AboutBanner = () => {
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-90"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-orange-400 opacity-90"></div>
 
       {/* Content */}
       <div className="relative z-10">
         <h1 className="text-3xl md:text-5xl font-bold">About Us</h1>
         <div className="mt-4 flex items-center justify-center text-sm md:text-base font-medium">
-          <span className="text-pink-300">Home</span>
+          <span className="text-orange-200">Home</span>
           <FaAngleDoubleRight className="mx-2 text-white" />
           <span className="text-white">About Us</span>
         </div>

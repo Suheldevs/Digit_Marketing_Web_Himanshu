@@ -68,7 +68,7 @@ const Services = () => {
     ];
 
     const stats = [
-        { icon: Award, number: '500+', label: 'Projects Completed' },
+        { icon: Award, number: '20+', label: 'Projects Completed' },
         { icon: Target, number: '98%', label: 'Client Satisfaction' },
         { icon: Zap, number: '24/7', label: 'Support Available' }
     ];
@@ -125,7 +125,7 @@ const Services = () => {
                     {services.map((service, index) => (
                         <Link
                             key={service.id}
-                            to={`/services/${service.id}`}
+                            to={service.id === 'ecommerce' ? '/contact' : `/services/${service.id}`}
                             className={`group bg-white p-8 rounded-xl border border-gray-100 hover:border-orange-200 hover:shadow-xl transition-all duration-300 flex flex-col h-full ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                                 }`}
                             style={{ transitionDelay: `${index * 100}ms` }}

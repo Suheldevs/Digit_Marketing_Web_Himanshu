@@ -19,6 +19,7 @@ import {
   ExternalLink,
   ChevronRight
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const [email, setEmail] = useState('');
@@ -37,21 +38,21 @@ const Footer = () => {
   };
 
   const services = [
-    { name: "Web Development", href: "#webdev" },
-    { name: "SEO Optimization", href: "#seo" },
-    { name: "Digital Marketing", href: "#marketing" },
-    { name: "Mobile App Development", href: "#mobile" },
-    { name: "Graphic Design", href: "#design" },
-    { name: "Content Strategy", href: "#content" }
+    { name: "Web Development", href: "/services/web-development" },
+    { name: "SEO Optimization", href: "/services/seo" },
+    { name: "Digital Marketing", href: "/services/digital-marketing" },
+    { name: "Mobile App Development", href: "/services/app-development" },
+    { name: "Graphic Design", href: "/services/graphic-design" },
+    { name: "Content Strategy", href: "/services" }
   ];
 
   const company = [
-    { name: "About Us", href: "#about" },
-    { name: "Our Team", href: "#team" },
-    { name: "Careers", href: "#careers" },
-    { name: "Portfolio", href: "#portfolio" },
-    { name: "Case Studies", href: "#cases" },
-    { name: "Blog", href: "#blog" }
+    { name: "About Us", href: "/about" },
+    { name: "Our Team", href: "/about" },
+    { name: "Careers", href: "/contact" },
+    { name: "Portfolio", href: "/project" },
+    { name: "Case Studies", href: "/project" },
+    { name: "Blog", href: "/" }
   ];
 
   const socialLinks = [
@@ -63,7 +64,7 @@ const Footer = () => {
   ];
 
   const stats = [
-    { icon: Award, number: "500+", label: "Projects Completed" },
+    { icon: Award, number: "20+", label: "Projects Completed" },
     { icon: Users, number: "200+", label: "Happy Clients" },
     { icon: Target, number: "98%", label: "Success Rate" },
     { icon: Zap, number: "24/7", label: "Support Available" }
@@ -91,25 +92,24 @@ const Footer = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         {/* Main Footer Content */}
         <div className="pt-20 pb-12">
-          <div className="grid lg:grid-cols-5 gap-12">
-            {/* Company Info - Spanning 2 columns */}
-            <div className="lg:col-span-2 space-y-8">
+          <div className="grid lg:grid-cols-4 gap-4">
+            {/* Company Info */}
+            <div className="space-y-8">
               {/* Logo & Description */}
               <div>
                 <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-pink-500 rounded-xl flex items-center justify-center mr-4">
-                    <Globe className="w-6 h-6 text-white" />
-                  </div>
-                  <h2 className="text-3xl font-bold bg-gradient-to-r from-orange-400 to-pink-400 bg-clip-text text-transparent">
-                    DigitalCraft
-                  </h2>
+                  <Link to="/" className="flex items-center space-x-2 group">
+                    <img
+                      src="/logo.png"
+                      alt="Logo"
+                      className='h-18 object-contain p-1'
+                    />
+                  </Link>
                 </div>
-                <p className="text-gray-300 text-lg leading-relaxed mb-8">
-                  Transform your digital presence with our cutting-edge solutions. We help businesses grow online through innovative web development, strategic SEO, and powerful digital marketing campaigns.
+                <p className="text-gray-300 text-lg leading-relaxed mb-4">
+                  Transform your digital presence with innovative web development, SEO, and digital marketing solutions.
                 </p>
               </div>
-
-
             </div>
 
             {/* Services */}
@@ -118,13 +118,13 @@ const Footer = () => {
               <ul className="space-y-3">
                 {services.map((service, index) => (
                   <li key={index}>
-                    <a
-                      href={service.href}
+                    <Link
+                      to={service.href}
                       className="text-gray-400 hover:text-orange-400 transition-colors duration-200 flex items-center group"
                     >
                       <ChevronRight className="w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform duration-200" />
                       {service.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -136,13 +136,13 @@ const Footer = () => {
               <ul className="space-y-3">
                 {company.map((item, index) => (
                   <li key={index}>
-                    <a
-                      href={item.href}
+                    <Link
+                      to={item.href}
                       className="text-gray-400 hover:text-orange-400 transition-colors duration-200 flex items-center group"
                     >
                       <ChevronRight className="w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform duration-200" />
                       {item.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -150,8 +150,6 @@ const Footer = () => {
 
             {/* Support & Contact */}
             <div>
-
-
               {/* Contact Info */}
               <div className="space-y-4">
                 <h4 className="font-semibold text-white">Get in Touch</h4>
@@ -217,9 +215,9 @@ const Footer = () => {
 
             {/* Additional Links */}
             <div className="flex items-center space-x-6 text-sm">
-              <a href="/privacy-policy" className="text-gray-400 hover:text-orange-400 transition-colors">
+              <Link to="/privacy-policy" className="text-gray-400 hover:text-orange-400 transition-colors">
                 Privacy Policy
-              </a>
+              </Link>
               <a href="#terms" className="text-gray-400 hover:text-orange-400 transition-colors">
                 Terms
               </a>
@@ -234,15 +232,15 @@ const Footer = () => {
       {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
-        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 z-50 flex items-center justify-center"
+        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 z-50 flex items-center justify-center"
         aria-label="Scroll to Top"
       >
         <ArrowUp className="w-5 h-5" />
       </button>
 
       {/* Decorative Elements */}
-      <div className="absolute bottom-0 right-0 w-64 h-64 bg-gradient-to-l from-orange-500/10 to-pink-500/10 rounded-full blur-3xl"></div>
-      <div className="absolute top-1/2 left-0 w-32 h-32 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-2xl"></div>
+      <div className="absolute bottom-0 right-0 w-64 h-64 bg-gradient-to-l from-orange-500/10 to-orange-400/10 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/2 left-0 w-32 h-32 bg-gradient-to-r from-blue-500/10 to-orange-500/10 rounded-full blur-2xl"></div>
     </footer>
   );
 };

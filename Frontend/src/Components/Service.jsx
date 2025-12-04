@@ -15,7 +15,7 @@ const Service = () => {
       title: "Website Design",
       icon: icon1,
       image: service1,
-      link: "/service/webdesign"
+      link: "/service/web-development"
     },
     {
       title: "Custom Software Development",
@@ -27,7 +27,7 @@ const Service = () => {
       title: "Mobile App Development",
       icon: icon3,
       image: service4,
-      link: "/service/androiddevelopment"
+      link: "/service/app-development"
     },
     {
       title: "Ecommerce Solutions",
@@ -36,16 +36,16 @@ const Service = () => {
       link: "/service/ecommerceapp"
     },
     {
-      title: "Graphic Design",
+      title: "Digital Marketing",
       icon: icon1,
       image: icon1,
-      link: "/service/graphicdesign"
+      link: "/service/digital-marketing"
     },
     {
       title: "Search Engine Optimization",
       icon: icon3,
       image: icon3,
-      link: "/service/seogoogleprofileManagement"
+      link: "/service/seo"
     },
     {
       title: "Social Media Optimization",
@@ -62,29 +62,27 @@ const Service = () => {
   ];
 
   return (
-    <div className='flex flex-col items-center justify-center mb-10 bg-white py-10 px-4 sm:px-6 md:px-8 lg:px-10 container mx-auto'>
-      
+    <div className='flex bg-gray-50 flex-col items-center justify-center mb-10 bg-white py-10 px-4 sm:px-6 md:px-8 lg:px-10 container mx-auto'>
+
       {/* Header Section with Orange Theme */}
-      <div className="text-center mb-12 transform transition-all duration-1000">
-        <span className="text-orange-600 font-medium uppercase tracking-wider mb-6 block">
-          Our Services
-        </span>
+      <div className="text-center mb-6 transform transition-all duration-1000">
+
         <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight text-gray-900">
-          What <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-pink-500">
+          What <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-orange-600">
             We Offer
           </span>
         </h2>
-        
+
         {/* Decorative Orange Line */}
-        <div className="h-2 w-1/3 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full mb-6 mx-auto"></div>
-        
+        <div className="h-2 w-1/3 bg-gradient-to-r from-orange-600 to-orange-600 rounded-full mb-6 mx-auto"></div>
+
         <p className="text-gray-600 text-base sm:text-lg md:text-xl max-w-3xl mx-auto">
           Innovative solutions in Web Development, SEO, and Digital Marketing to help businesses grow and thrive online
         </p>
       </div>
 
       {/* Services Grid */}
-      <div className='grid gap-8 mt-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 max-w-7xl'>
+      <div className='grid gap-8  grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 max-w-7xl'>
         {data?.map((dat, ind) => <ServiceCard key={ind} data={dat} />)}
       </div>
     </div>

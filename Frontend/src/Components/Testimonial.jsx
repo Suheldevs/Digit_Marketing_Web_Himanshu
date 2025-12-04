@@ -45,7 +45,7 @@ const testimonials = [
 
 const Testimonial = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-pink-50 relative overflow-hidden">
+    <section className="py-10 bg-gradient-to-b from-white to-pink-50 relative overflow-hidden">
       {/* Decorative Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute -top-24 -right-24 w-96 h-96 bg-pink-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
@@ -53,11 +53,11 @@ const Testimonial = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-12 transform transition-all duration-1000">
-          <span className="text-orange-600 font-medium uppercase tracking-wider mb-6 block">
+        <div className="text-center mb-6 transform transition-all duration-1000">
+          <span className="text-orange-600 font-medium uppercase tracking-wider mb-4 block">
             TESTIMONIALS
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight text-gray-900">
+          <h2 className="text-4xl md:text-5xl font-bold mb-2 tracking-tight text-gray-900">
             What Our Clients <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-pink-500">Say About Us</span>
           </h2>
 

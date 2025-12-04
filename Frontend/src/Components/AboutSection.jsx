@@ -11,27 +11,19 @@ const AboutSection = () => {
 
         {/* Left Side: Image */}
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
           className="lg:w-1/2 flex justify-center lg:justify-start"
         >
           <div className="relative group">
             <img
               src={image}
               alt="About CodeClicks"
-              className="relative w-full h-auto max-w-xl rounded-2xl shadow-xl transition-transform transform hover:scale-105 duration-500"
+              className="relative w-full h-auto max-w-xl rounded-2xl  transition-transform transform hover:scale-105 duration-500"
             />
           </div>
         </motion.div>
 
         {/* Right Side: Company Description */}
         <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
           className="lg:w-1/2 space-y-8 text-center lg:text-left"
         >
           {/* Badge */}
@@ -41,18 +33,18 @@ const AboutSection = () => {
             </span>
           </div> */}
 
-         <h2 className="text-2xl md:text-3xl  font-bold bg-gradient-to-r from-orange-600 to-pink-600 bg-clip-text text-transparent text-start md:text-center lg:text-start leading-tight">
-  Transforming Ideas Into Digital Excellence
-</h2>
+          <h2 className="text-2xl md:text-3xl  font-bold bg-gradient-to-r from-orange-600 to-pink-600 bg-clip-text text-transparent text-start md:text-center lg:text-start leading-tight">
+            Transforming Ideas Into Digital Excellence
+          </h2>
 
-<p className="text-gray-700 text-base md:text-base leading-relaxed text-justify lg:text-start">
-  <span className="font-semibold text-orange-600">CodeClicks</span> is a leading software development company in Lucknow, specializing in custom web applications, mobile app development, and comprehensive digital solutions. We help businesses accelerate their growth through innovative technology and strategic digital transformation.
-</p>
+          <p className="text-gray-700 text-base md:text-base leading-relaxed text-justify lg:text-start">
+            <span className="font-semibold text-orange-600">CodeClicks</span> is a leading software development company in Lucknow, specializing in custom web applications, mobile app development, and comprehensive digital solutions. We help businesses accelerate their growth through innovative technology and strategic digital transformation.
+          </p>
 
 
           <div className="grid gap-4 md:grid-cols-2">
             {/* Mission Card */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -61,7 +53,7 @@ const AboutSection = () => {
             >
               {/* Orange Accent */}
               <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-orange-500 to-pink-500 rounded-l-xl"></div>
-              
+
               <div className="flex items-center space-x-2">
                 <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-pink-500 rounded-lg flex items-center justify-center">
                   <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -70,14 +62,14 @@ const AboutSection = () => {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900">Our Mission</h3>
               </div>
-              
+
               <p className="text-gray-600 text-sm md:text-base leading-relaxed">
                 To empower businesses with smart, scalable tech solutions that drive growth and efficiency in a digital-first world.
               </p>
             </motion.div>
 
             {/* Vision Card */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -86,7 +78,7 @@ const AboutSection = () => {
             >
               {/* Orange Accent */}
               <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-orange-500 to-pink-500 rounded-l-xl"></div>
-              
+
               <div className="flex items-center space-x-2">
                 <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-pink-500 rounded-lg flex items-center justify-center">
                   <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -96,7 +88,7 @@ const AboutSection = () => {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900">Our Vision</h3>
               </div>
-              
+
               <p className="text-gray-600 text-sm md:text-base leading-relaxed">
                 To be a leading IT partner, enabling businesses to thrive and innovate in an ever-evolving tech landscape.
               </p>
