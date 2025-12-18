@@ -77,6 +77,12 @@ const Header = () => {
       hasDropdown: false
     },
     {
+      name: 'Our Packages',
+      icon: Award,
+      href: '/packages',
+      hasDropdown: false
+    },
+    {
       name: 'Contact',
       icon: Mail,
       href: '/contact',

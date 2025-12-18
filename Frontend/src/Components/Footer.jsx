@@ -51,6 +51,7 @@ const Footer = () => {
     { name: "Our Team", href: "/about" },
     { name: "Careers", href: "/contact" },
     { name: "Portfolio", href: "/project" },
+    { name: "Our Packages", href: "/packages" },
     { name: "Case Studies", href: "/project" },
     { name: "Blog", href: "/" }
   ];
@@ -158,7 +159,7 @@ const Footer = () => {
                   <MapPin className="w-5 h-5 text-orange-400 mt-1 flex-shrink-0" />
                   <div>
                     <p className="text-gray-300 text-sm leading-relaxed">
-                      1st Floor, Rolex Tower, D2/119, Vibhuti Khand, Gomti Nagar, Lucknow, Uttar Pradesh 226010
+                      631/2, Patel Nagar, Ismailganj, Indira Nagar, Lucknow, Uttar Pradesh 226028
                     </p>
                   </div>
                 </div>

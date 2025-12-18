@@ -9,6 +9,7 @@ import Footer from "./Components/Footer";
 import Contact from "./Pages/Contact";
 import PrivacyPolicy from "./Pages/PrivacyPolicy";
 import Services from "./Pages/Services";
+import Packages from "./Pages/Packages";
 
 // Service Detail Pages
 import WebDevelopmentDetail from "./Pages/ServiceDetails/WebDevelopment";
@@ -32,6 +33,7 @@ function App() {
         <Route path="/service/graphic-design" element={<GraphicDesign />} />
         <Route path="/web" element={<WebDevelopment />} />
         <Route path="/project" element={<Project />} />
+        <Route path="/packages" element={<Packages />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>

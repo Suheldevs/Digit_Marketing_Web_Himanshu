@@ -87,8 +87,8 @@ const Contact = () => {
                 <div>
                   <h3 className="font-bold text-gray-900 mb-1">Visit Us</h3>
                   <p className="text-gray-600">
-                    1st Floor, Rolex Tower, D2/119, Vibhuti Khand,<br />
-                    Gomti Nagar, Lucknow, Uttar Pradesh 226010
+                    631/2, Patel Nagar, Ismailganj,<br />
+                    Indira Nagar, Lucknow, Uttar Pradesh 226028
                   </p>
                 </div>
               </div>

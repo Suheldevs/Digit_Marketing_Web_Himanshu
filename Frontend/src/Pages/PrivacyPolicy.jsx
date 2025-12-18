@@ -83,8 +83,8 @@ const PrivacyPolicy = () => {
                             </p>
                             <div className="mt-4 p-4 bg-gray-50 rounded-lg border border-gray-100">
                                 <p className="font-semibold text-gray-800">CodeClicks</p>
-                                <p>1st Floor, Rolex Tower, D2/119, Vibhuti Khand</p>
-                                <p>Gomti Nagar, Lucknow, Uttar Pradesh 226010</p>
+                                <p>631/2, Patel Nagar, Ismailganj</p>
+                                <p>Indira Nagar, Lucknow, Uttar Pradesh 226028</p>
                                 <p className="mt-2">Email: info@codeclicks.in</p>
                                 <p>Phone: +91 8318159403</p>
                             </div>
